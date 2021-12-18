@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class cadenas {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
+		in.useDelimiter("\n");
 		// Ejercicio 11.1
 		String nombre;
 		System.out.print("Escriba su nombre: ");
@@ -94,7 +95,7 @@ public class cadenas {
 		may = nombre.toUpperCase();
 		min = nombre.toLowerCase();
 		for(int cont=0; cont<nombre.length(); cont++) {
-			if ((cont==0) || (nombre.charAt(cont-1) != ' ')) {
+			if ((cont==0) || (nombre.charAt(cont-1) == ' ')) {
 				System.out.print(may.charAt(cont));
 			} else {
 				System.out.print(min.charAt(cont));
